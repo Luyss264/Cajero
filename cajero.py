@@ -32,6 +32,8 @@ def cajero():
         elif consultaUser == 5:
             print("Adiós")
             break
+        
+        
 
         elif consultaUser == 2:
 

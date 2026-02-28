@@ -1,8 +1,37 @@
 def cajero():
 
+    print("BIENVENIDO AL CAJERO AUTOMATICO\n")
+
+      ##Registros##
+    usuarios = {}
+    
+    print("Registro de usuario")
+    nombre = input("Crea tu nombre de usuario: \n")
+    contraseña = input("Crea tu contraseña: \n")
+
+    usuarios[nombre]= contraseña
+
+    print("El usuario ha sido registrado correctamente.")
+
+
+    ##Inicio de sesión##
+    print("Inicio de sesión")
+    nombre_inicio = input("Introduce tu nombre: \n")
+    contraseña_inicio = input("Introduce tu contraseña: \n")
+    
+    if nombre_inicio in usuarios:
+        if usuarios[nombre_inicio] == contraseña_inicio:
+            print("Acceso concedido.")
+        else: 
+            print("La contraseña o el usuario son incorrectos.")
+            return
+    else: 
+        print("El usuario no existe")
+        return
+
+
     saldoInicial=1000
     
-    print("BIENVENIDO AL CAJERO AUTOMATICO\n")
 
     try:
         vecesOP = int(input("¿Cuántas operaciones deseas realizar?: "))

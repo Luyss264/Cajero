@@ -1,6 +1,8 @@
 def cajero():
 
     saldoInicial=1000
+    
+    print("BIENVENIDO AL CAJERO AUTOMATICO\n")
 
     try:
         vecesOP = int(input("¿Cuántas operaciones deseas realizar?: "))
@@ -15,7 +17,9 @@ def cajero():
         print("1-Consultar Saldo")
         print("2-Retirar dinero")
         print("3-Depositar dinero")
-
+        print("4-Cuantas operaciones hechas")
+        print("5-Salir")
+        
         try:
             consultaUser = int(input())
         except ValueError:
@@ -24,6 +28,10 @@ def cajero():
             
         if consultaUser == 1:
             print(f"el saldo es de: {saldoInicial}")
+        
+        elif consultaUser == 5:
+            print("Adiós")
+            break
 
         elif consultaUser == 2:
 
@@ -73,7 +81,11 @@ def cajero():
                 else:
                     print("VALOR INVALIDO")
                     break
-
+        
+        elif consultaUser == 4:
+            
+            print(f"haz realizado {i} operaciónes")
+            
         else:
             print("OPCIÓN NO VALIDA")
 

@@ -24,10 +24,8 @@ def cajero():
             print("Acceso concedido.")
         else: 
             print("La contraseña o el usuario son incorrectos.")
-            return
     else: 
         print("El usuario no existe")
-        return
 
 
     saldoInicial=1000
@@ -57,13 +55,8 @@ def cajero():
             
         if consultaUser == 1:
             print(f"el saldo es de: {saldoInicial}")
-        
-        elif consultaUser == 5:
-            print("Adiós")
             break
         
-        
-
         elif consultaUser == 2:
 
             while True:
@@ -117,6 +110,10 @@ def cajero():
             
             print(f"haz realizado {i} operaciónes")
             
+        elif consultaUser == 5:
+            print("Adiós")
+            break    
+        
         else:
             print("OPCIÓN NO VALIDA")
 
